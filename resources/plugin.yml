@@ -1,0 +1,10 @@
+name: GalacticCore
+version: ${project.version}
+main: us.outerworlds.galacticcore.GalacticCore
+api-version: 1.16
+authors: [ Yochran ]
+description: Enchantments and other features for GalacticSky.
+website: https://outerworlds.us
+commands:
+  Enchanter:
+    description: Open the enchanter.
