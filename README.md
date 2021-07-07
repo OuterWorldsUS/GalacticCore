@@ -1,0 +1,2 @@
+# GalacticCore
+Features for GalacticSky
