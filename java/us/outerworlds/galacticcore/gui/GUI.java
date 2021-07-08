@@ -14,17 +14,17 @@ public class GUI {
     private Player player;
     private Inventory inventory;
 
-    public static Map<UUID, GUI> open_guis;
-    public static Map<Integer, Button> buttons;
+    private static final Map<UUID, GUI> open_guis;
+    public Map<Integer, Button> buttons;
 
     static {
         open_guis = new HashMap<>();
-        buttons = new HashMap<>();
     }
 
     public GUI(Player player, int size, String title) {
         this.player = player;
         this.inventory = Bukkit.createInventory(null, size, Utils.translate(title));
+        this.buttons = new HashMap<>();
     }
 
     public Player getPlayer() { return player; }
@@ -71,4 +71,6 @@ public class GUI {
                 inventory.setItem(i, itemBuilder.getItemStack());
         }
     }
+
+    public static Map<UUID, GUI> getOpenGUIs() { return open_guis; }
 }

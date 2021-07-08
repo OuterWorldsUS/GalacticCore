@@ -2,6 +2,8 @@ package us.outerworlds.galacticcore.gui;
 
 import org.bukkit.entity.Player;
 
+import java.util.Map;
+
 public abstract class CustomGUI {
 
     protected GUI gui;
@@ -18,4 +20,5 @@ public abstract class CustomGUI {
     }
 
     public GUI getGui() { return gui; }
+    public Map<Integer, Button> getButtons() { return gui.buttons; }
 }

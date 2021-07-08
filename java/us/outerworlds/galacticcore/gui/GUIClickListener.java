@@ -19,8 +19,8 @@ public class GUIClickListener implements Listener {
         if (event.getCurrentItem() == null || event.getCurrentItem().getType() == XMaterial.AIR.parseMaterial())
             return;
 
-        if (GUI.open_guis.containsKey(event.getWhoClicked().getUniqueId())) {
-            GUI gui = GUI.open_guis.get(event.getWhoClicked().getUniqueId());
+        if (GUI.getOpenGUIs().containsKey(event.getWhoClicked().getUniqueId())) {
+            GUI gui = GUI.getOpenGUIs().get(event.getWhoClicked().getUniqueId());
             if (gui != null && event.getClickedInventory() != null && event.getClickedInventory().equals(gui.getInventory())) {
                 event.setCancelled(true);
 
